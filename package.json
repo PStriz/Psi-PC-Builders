@@ -1,0 +1,26 @@
+{
+  "name": "psi-pc",
+  "version": "1.0.0",
+  "description": "Website for Psi PC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkaden4/Psi-PC-Builders.git"
+  },
+  "author": "Kaden Thomas",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.9.2",
+    "parcel-bundler": "^1.9.4",
+    "pug": "^2.0.3"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.0",
+    "skeleton.css": "^2.0.4",
+    "underscore": "^1.9.1"
+  }
+}
