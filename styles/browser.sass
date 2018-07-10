@@ -1,0 +1,73 @@
+/*
+ * browser.scss
+ * fake browser support
+ */
+.browser
+    $size: 550px
+    $dropoff: 400px
+    $bar-size: $size * 0.08 !default
+    @if $size < $dropoff
+        $bar-size: $size * 0.13
+    $font-size: $bar-size * 0.4
+
+    color: black
+
+    position: relative
+
+    font-size: $font-size
+
+    width: $size
+    height: $size / (16/9)
+
+    margin: auto
+
+    border: 1px solid lightgrey
+    border-radius: 5px
+    border-top-width: $bar-size
+    box-sizing: border-box
+
+    background-color: $light-color
+
+    .bar
+        $dot-size: $bar-size * 0.5
+        $dot-margin: $dot-size * 0.2
+
+        position: absolute
+        top: -$bar-size
+
+        width: 100%
+        height: $bar-size
+
+        display: flex
+        align-items: center
+
+        .buttons
+            display: flex
+            & > *
+                height: $dot-size
+                width: $dot-size
+                border-radius: 50%
+                opacity: 0.7
+                margin-right: $dot-margin
+                &:last-child
+                    margin-right: $dot-margin * 2
+
+        $search-height: $dot-size * 1.3
+        .search
+            flex-grow: 1
+            align-self: center
+
+            padding: 0 $dot-margin
+            margin: $dot-margin
+
+            height: $search-height
+            line-height: $search-height
+            box-sizing: border-box
+
+            color: ghostwhite
+            background-color: darken(white, 34)
+
+
+        @each $color in green yellow red
+            .#{$color}
+                background-color: $color
