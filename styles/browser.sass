@@ -17,7 +17,8 @@
     font-size: $font-size
 
     width: $size
-    height: $size / (16/9)
+    max-width: 80vw
+    min-height:$size / (16/9)
 
     margin: auto
 
@@ -65,7 +66,7 @@
             box-sizing: border-box
 
             color: ghostwhite
-            background-color: darken(white, 34)
+            background-color: darken(white, 30)
 
 
         @each $color in green yellow red
