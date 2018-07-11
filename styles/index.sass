@@ -6,7 +6,7 @@ body, html
     height: 100%
     width: 100%
     font-family: 'Titillium Web'
-    font-size: 16px
+    font-size: 15dpi
     color: $light-color
     background-color: $dark-grey
 
@@ -142,7 +142,7 @@ $services-color: lighten($secondary-color, 6%)
     background-color: $services-color
     color: white
 
-    padding: 30px 0
+    padding-top: 30px
 
     width: 100%
     .info 
@@ -171,21 +171,33 @@ $services-color: lighten($secondary-color, 6%)
             .content
                 font-size: 13.5px
                 opacity: 0.9
+
 .pricing
-    //position: relative
-    //left: 50%
-    //transform: translate(-50%, -50%)
+    position: relative
+    left: 50%
+    transform: translate(-50%, 30%)
 
-    background-color: lightgrey
-    color: $dark-grey
+    background-color: ghostwhite
+    color: $services-color
 
-    width: 30%
+    border: 10px solid $services-color
+    border-radius: 5px
+
+    margin-top: -35px
+
+    max-width: 960px
+    width: 380px
+
+    @media (max-width: 400px)
+        width: 90%
+
+    box-sizing: border-box
+
     padding: 20px
 
     text-align: center
 
-    .title
-        font-size: 4em
+    font-size: 1.5em
 
 .getting-started 
     background-color: $neutral-grey
@@ -197,7 +209,7 @@ $services-color: lighten($secondary-color, 6%)
     $grad-shadow-col: lighten(black, 12);
     $grad-shadow-end: calc(#{$grad} + 5px)
 
-    padding: 45px 0
+    padding: 105px 0
 
     //background: linear-gradient(180deg, $grad-col $grad, $grad-shadow-col $grad, $grad-shadow-col $grad-shadow-end, $neutral-grey $grad-shadow-end, $neutral-grey 100%)
 
@@ -216,7 +228,7 @@ $services-color: lighten($secondary-color, 6%)
     font-size: 1.1em
     padding: 30px 0
     a
-        color: orangered
+        color: lighten(red, 35)
         text-decoration: none
 
 .sep
@@ -242,6 +254,14 @@ $services-color: lighten($secondary-color, 6%)
     & > .content
         padding: 0px 5px
         color: darken(grey, 30)
+
+.about
+    font-size: 1.1em
+    background-color: $dark-grey
+    color: #f0f0f0
+    padding: 85px 0
+    text-align: center
+    font-size: 15dpi
 
 @import browser
 
